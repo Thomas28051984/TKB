@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}2008-2021{% endblock %}
+
+{% block body %}
+
+<section class="page">
+
+    <div><img src="{{ asset('images/rideaugauchetheatre.png') }}" alt="Image masque théâtre"></div>
+
+<div class="container">
+    
+    <h1>2008-2021</h1>
+
+    
+    <ul>
+        <li>"Odyssée Théâtre" - Béziers (Mars 08) 34</li>
+        <li>Festival des Arlequins - Cholet (Avril 08) 43</li>
+        <li>Théâtrales de Castries (Novembre 10) 34</li>
+        <li>Festival de Fabrègues (Mars 2011) 34</li>
+        <li>3ème Festival de Baillargues "Scènes Attitudes" (Mars 2011) 34</li>
+        <li>6ème Festival "Arts Sceniq" Manduel (Mars 2011) 30</li>
+        <li>15ème Festival de Bellegarde (Avril 2011) 30</li>
+        <li>Théâtre de La Mer - Sète (34) Festival Acte III - Scène 7 (Juin 2014) 34</li>
+        <li>La Cigalière - Sérignan (34) Festival "PAUSE" - 21ème Festival de spectacles amateurs (Juillet 2014) 34</li>
+        <li>Théâtrales de Castries (Novembre 2014) 34</li>
+        <li>L'Illustre Théâtre, Pézenas (34) : "Les Folies de Scapin" , 2ème Concours Régional de Théâtre amateur (Mai 2015) 34</li>
+        <li>"Teyran sur scène" 27-28-29 Novembre 2015 (34)</li>
+        <li> <a href="{{ asset('images/30ansTKB/30ans.jpg') }}" alt="Photo de groupe 30 ans TKB" target="_blank">Le TKB fête ses 30 ans</a> : Première du "Spectateur condamné à mort" 26 Novembre 2019 - Teyran (34)</li>
+    </ul>
+    <div class="Anniversaire30TKB">
+        <video width="320" height="180" controls>
+            <source src="{{ asset('videos/Anniv.TKB.mp4') }}" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+    </div>
+    <ul>
+        <li> Théâtrales de Castries : 9 Novembre 2019 - Castries (34)</li>
+    </ul>
+</div>
+
+<div><img src="{{ asset('images/rideaudroittheatre.png') }}" alt="reideau droite théatre" class=" rideau-droite"></div>
+</section>
+{% endblock %}

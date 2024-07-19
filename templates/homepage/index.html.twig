@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+<div class="wrapper">
+    <h1>Bienvenue au</h1>
+
+    <a href="{{ path('app_accueil') }}"><img src="{{ asset('images/accueil_tkb.jpg') }}" alt="Image salle spectacle" class="Image-bienvenue"></a>
+
+    <p>Dernière mise à jour : 07/2024</p>
+</div>
+{% endblock %}

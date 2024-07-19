@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AlbumPhotos{% endblock %}
+
+{% block body %}
+<section class="page">
+    <div><img src="{{ asset('images/rideaugauchetheatre.png') }}" alt="Image masque théâtre"></div>
+    
+        <div class="container">
+            <h1>Album photos</h1>
+
+            <div class="playercaroussel"></div>
+                <div class="folder-buttons">
+                    <button onclick="loadFolder('Naïs')">Naïs</button>
+                    <button onclick="loadFolder('Lagrandemuraille')">La Grande Muraille</button>
+                    <button onclick="loadFolder('Jeuxdecannes')">Jeux de Cannes</button>
+                    <button onclick="loadFolder('Cequevoitfox')">Ce que voit Fox</button>
+                    <button onclick="loadFolder('Huitfemmes')">Huit Femmes</button>
+                    <button onclick="loadFolder('Soudainletedernier')">Soudain l'Eté Dernier</button>
+                    <button onclick="loadFolder('Delirium')">Délirium</button>
+                    <button onclick="loadFolder('Uneheure')">Une heure chez les Autres</button>
+                    <br>
+                    <button onclick="loadFolder('Festivaloffavignon')">Festival Off Avignon</button>
+                    <button onclick="loadFolder('Perenoelordure')">Le Père Noël est une ordure</button>
+                    <button onclick="loadFolder('Lespalmes')">Les Palmes de M. Schutz</button>
+                    <button onclick="loadFolder('Conversation')">Conversations après un enterrement</button>
+                    <button onclick="loadFolder('Uncoindazur')">Un Coin d'Azur</button>
+                    <button onclick="loadFolder('Lesrats')">Les Rats</button>
+                    <button onclick="loadFolder('Mastication')">La Mastication des Morts</button>
+                    <button onclick="loadFolder('Repasdesfauves')">Le Repas des Fauves</button>
+ 
+                </div>
+
+            </div>
+
+            <div class="carousel">
+                <div class="carousel-container">
+                    <img id="carousel-image" src="" alt="Carousel Image">
+                </div>
+                <div class="navigation-buttons">
+                    <button id="prev-btn" onclick="prevImage()">Précédente</button>
+                    <button id="next-btn" onclick="nextImage()">Suivante</button>
+                </div>
+            </div>
+
+<div><img src="{{ asset('images/rideaudroittheatre.png') }}" alt="reideau droite théatre" class=" rideau-droite"></div>
+</section>   
+
+{% endblock %}

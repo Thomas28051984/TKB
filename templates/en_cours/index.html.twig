@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}En cours{% endblock %}
+
+{% block body %}
+
+<section class="page">
+
+   
+
+<div class="container">
+    
+    <div class="affiche">
+        <img src="{{ asset('images/Compromis.jpg') }}" alt="Affiche pièce compromis">
+    </div>
+
+    <br>
+
+    <p>
+        "Deux amis, un appartement vide. L'un est un comédien médiocre, l'autre un dramaturge raté. Ils sont là pour la vente de l'appartement.
+        <br>
+        En attendant l'acheteur, ils discutent, se flattent, se taquinent, puis se blessent... 
+       <br> 
+        Un règlement de comptes farcesque mais sans concession, devant l'acheteur qui finit par arriver. Va-t-il en demeurer le spectateur, en devenir l'arbitre ou en être au final la seule victime ?" 
+    </p>
+
+    <div class="medias">
+        <div><a href="https://www.midilibre.fr/2024/04/23/un-retour-sur-les-planches-pour-tkb-avec-compromis-11907017.php">
+            <img src="{{ asset('images/journal006.gif') }}" alt="Image affiche pièce compromis"></a><br>Articles de Presse et articles divers</div>
+        <div><img src="{{ asset('images/camera010.gif') }}" alt="Image affiche pièce compromis"><br>Clip Video</div>
+        <div><img src="{{ asset('images/objets14.gif') }}" alt="Image affiche pièce compromis"><br>Photos</div>
+    </div>
+
+    <br>
+
+    <h2>DISTRIBUTION</h2>
+
+    <table class="distribution">
+        
+        <tr><td>Claude TEISSIER :</td><td>Denis</td></tr>
+        <tr><td>Robert COUFFIGNAL :</td><td>Martin</td></tr>
+        <tr><td>Christian RIGAUD :</td><td>Mr Duval</td></tr>
+
+    </table>
+
+    <br>
+
+    <p><strong>Mise en scène et décors</strong></p>
+    <p>Théâtre du Krypton Bleu (Travail collectif)</p>
+
+    <p><strong>Régie Sons/Lumières</strong></p>
+    <p>Arlette TEISSIER</p>
+    <p>Bernadette COUFFIGNAL</p>
+
+        
+</div>
+
+</section>
+
+{% endblock %}

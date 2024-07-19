@@ -1,0 +1,17 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+event:
+    path: /event
+    controller: App\Controller\EventController::index
+
+calendar:
+    path: /calendar
+    controller: App\Controller\EventController::index
+
+event_new:
+    path: /event/new
+    controller: App\Controller\EventController::new

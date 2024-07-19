@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<section class="page">
+    <div>
+        <img src="{{ asset('images/rideaugauchetheatre.png') }}" alt="Image masque théâtre">
+    </div>
+    
+         <div class="container">
+
+
+            <h1>Théâtre du Krypton Bleu</h1>
+
+            <p>Date de création : 1989 - Association loi 1901</p>
+            <p>Président : Claude TEISSIER</p>
+  
+                <div class="presentation">
+
+    
+                    <div>
+                        <p>Le TKB a été créé en Juin 1989 dans la continuité de l'Atelier Théâtre du Foyer Rural de Teyran. Cet atelier, dirigé par Suzanne Desmond, alors responsable de la section "Formation de l'Acteur" au centre Culturel du Languedoc, a monté dix spectacles  de 1980 à 1989.</p>
+                        <br>
+                        <p>Depuis 1989 le TKB (présidé et dirigé par François Fajula de 1989 à 2019) se produit régulièrement et participe à différentes manifestations. Il est affilié à la FNCTA (Fédération Nationale des Compagnies de Théâtre et d'Animation).</p>
+                    </div>
+    
+                </div>
+
+         </div>
+
+         <div>
+            <img src="{{ asset('images/rideaudroittheatre.png') }}" alt="reideau droite théatre" class=" rideau-droite">
+        </div>
+</section>
+
+{% endblock %}
