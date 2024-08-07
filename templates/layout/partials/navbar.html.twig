@@ -17,7 +17,7 @@
       <li>
         {% if app.user %}
              <!-- Si l'utilisateur est connecté, affichez le bouton de déconnexion -->
-           <a href="{{ path('event_new') }}">Ajouter date</a><br>
+           <a href="{{ path('app_event') }}">Ajouter date</a><br>
             <a href="{{ path('app_logout') }}">Déconnection</a>           
                
          {% else %}
@@ -63,7 +63,7 @@
         </a>
       </li>
       <li>
-        <a href="{{ path('carousel_index') }}">
+        <a href="{{ path('app_event') }}">
           Album photos
         </a>
       </li>

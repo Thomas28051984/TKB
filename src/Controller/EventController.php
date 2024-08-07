@@ -13,33 +13,31 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class EventController extends AbstractController
 {
-    /**
-     * @Route("/calendar", name="calendar")
-     */
-    public function index(EventRepository $eventRepository): Response
+    
+    #[Route('/event', name: 'app_event')]
+     
+    public function getEvents(EventRepository $eventRepository)
     {
         $events = $eventRepository->findAll();
+        $eventData = [];
 
-        $eventsArray = array_map(function($event) {
-            return [
+        foreach ($events as $event) {
+            $eventData[] = [
+                'id' => $event->getId(),
                 'title' => $event->getTitle(),
                 'start' => $event->getStart()->format('Y-m-d\TH:i:s'),
                 'end' => $event->getEnd() ? $event->getEnd()->format('Y-m-d\TH:i:s') : null,
             ];
-        }, $events);
+        }
 
-        // Ajout de logs pour vérifier les événements
-        error_log(print_r($eventsArray, true));
-
-        return $this->render('calendar/index.html.twig', [
-            'events' => json_encode($eventsArray),
-        ]);
+        return new \Symfony\Component\HttpFoundation\JsonResponse($eventData);
     }
 
-    /**
-     * @Route("/event/new", name="event_new")
-     */
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+
+    
+     #[Route('/event', name: 'app_event_new')]
+     
+     function newEvent(Request $request, EntityManagerInterface $entityManager): Response
     {
         $event = new Event();
 
@@ -69,4 +67,5 @@ class EventController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
 }
