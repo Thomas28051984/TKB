@@ -212,12 +212,6 @@ hr {
     height: 500px;
   }
 
-  .medias {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
   .footer {
     width: 100%;
     background-color: #7D0D09;
@@ -243,45 +237,6 @@ hr {
     display: flex;
   }
 
-  .hover-image {
-    display: none;
-    position: absolute;
-    top: 20px;  /* Ajustez cette valeur selon vos besoins */
-    left: 20px;  /* Ajustez cette valeur selon vos besoins */
-    width: 200px;  /* Ajustez la taille de l'image selon vos besoins */
-    height: auto;
-    border: 1px solid #ccc;
-}
-
-.hover-text:hover + .image-container .hover-image {
-    display: block;
-}
-
-button {
-  text-decoration: none;
-  padding: 10px;
-  font-family: arial;
-  font-size: 1em;
-  color: #FFFFFF;
-  background-color: #1f497d;
-  border-radius: 24px;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  border: 4px solid #ff0000;
-  box-shadow: 3px 3px 12px #444444;
-  -webkit-box-shadow: 3px 3px 12px #444444;
-  -moz-box-shadow: 3px 3px 12px #444444;
-  }
-  
-  
-  button:hover {
-  padding: 10px;
-  background-color: #ff0000;
-  border: 4px solid #002060;
-  box-shadow: 1px 1px 4px #777777;
-  -webkit-box-shadow: 1px 1px 4px #777777;
-  -moz-box-shadow: 1px 1px 4px #777777;
-  }
 
 .column {
   display: flex;
@@ -293,11 +248,6 @@ button {
 .boutons { 
 display: flex;
 align-items: center;
-}
-
-.playercaroussel {
-  display: flex;
-  justify-content: center;
 }
 
 #calendar {
@@ -335,44 +285,105 @@ align-items: center;
   margin-left: auto;
 }
 
-.folder-buttons, .navigation-buttons {
-  margin: 20px;
-}
-
-.folder-buttons button, .navigation-buttons button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.folder-buttons button:hover, .navigation-buttons button:hover {
-  background-color: #0056b3;
-}
-
+/* Général */
 .carousel {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1200px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenu interne du carousel */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid #ccc;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 350px;
 }
 
-.carousel-container {
-  width: 300px;
-  height: 200px;
+/* Bouton avec le nom du dossier */
+.carousel-item button {
   margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.carousel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carousel-item button:hover {
+  background-color: #0056b3;
 }
 
+/* Photos */
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photos img {
+  max-width: 100%;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.photos img:hover {
+  transform: scale(1.05);
+}
+
+/* Contrôles du carousel */
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  background-size: 100%, 100%;
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon:after, .carousel-control-next-icon:after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+}
+
+.carousel-control-prev-icon:after {
+  transform: rotate(135deg);
+}
+
+.carousel-control-next-icon:after {
+  transform: rotate(-45deg);
+}
+
+table {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.medias, td {
+  text-align: center;
+}
