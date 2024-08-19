@@ -16,3 +16,6 @@ event_new:
     path: /event/new
     controller: App\Controller\EventController::new
 
+carousel:
+    path: /carousel
+    controller: App\Controller\CarouselController::index
