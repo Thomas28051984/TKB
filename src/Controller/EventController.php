@@ -10,32 +10,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class EventController extends AbstractController
 {
     
-    #[Route('/event', name: 'app_event')]
-     
-    public function getEvents(EventRepository $eventRepository)
-    {
-        $events = $eventRepository->findAll();
-        $eventData = [];
-
-        foreach ($events as $event) {
-            $eventData[] = [
-                'id' => $event->getId(),
-                'title' => $event->getTitle(),
-                'start' => $event->getStart()->format('Y-m-d\TH:i:s'),
-                'end' => $event->getEnd() ? $event->getEnd()->format('Y-m-d\TH:i:s') : null,
-            ];
-        }
-
-        return new \Symfony\Component\HttpFoundation\JsonResponse($eventData);
-    }
-
-
-    
-     #[Route('/event', name: 'app_event_new')]
+    #[Route('/event', name: 'app_event_new')]
      
      function newEvent(Request $request, EntityManagerInterface $entityManager): Response
     {
@@ -67,5 +47,24 @@ class EventController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+   
+    #[Route('/api/events', name: 'api_events')]
+    
+    public function getEvents(EventRepository $eventRepository)
+    {
+        $events = $eventRepository->findAll();
+        $eventData = [];
 
+        foreach ($events as $event) {
+            $eventData[] = [
+                'id' => $event->getId(),
+                'title' => $event->getTitle(),
+                'start' => $event->getStart()->format('Y-m-d\TH:i:s'),
+                'end' => $event->getEnd() ? $event->getEnd()->format('Y-m-d\TH:i:s') : null,
+            ];
+        }
+
+        return new JsonResponse($eventData);
+    }
 }
+

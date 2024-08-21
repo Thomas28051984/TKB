@@ -13,7 +13,7 @@ class CarouselController extends AbstractController
     #[Route('/carousel', name: 'app_carousel')]
     public function index(Request $request): Response
     {
-        $imageDirectories = ['Cequevoitfox', 'Conversation', 'Delirium', 'Festivaloffavignon', 'Huitfemmes', 'Jeuxdecannes', 'Lagrandemuraille', 'Lespalmes', 'Lesrats', 'Mastication', 'Naïs', 'Perenoelordure', 'Soudainletedernier', 'Uncoindazur', 'Uneheure' ]; // Liste des dossiers disponibles
+        $imageDirectories = ['Cequevoitfox', 'Conversation', 'Delirium', 'Festivaloffavignon', 'Huitfemmes', 'Jeuxdecannes', 'Lagrandemuraille', 'Lespalmes', 'Lesrats', 'Mastication', 'Naïs', 'Perenoelordure', 'Soudainletedernier', 'Uncoindazur', 'Uneheure', 'Compromis' ]; // Liste des dossiers disponibles
         $selectedDirectory = $request->query->get('directory', $imageDirectories[0]);
 
         if (!in_array($selectedDirectory, $imageDirectories)) {

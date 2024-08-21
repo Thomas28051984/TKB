@@ -2,11 +2,6 @@ import './styles/app.css';
 import { Calendar } from '@fullcalendar/core';
 import listPlugin from '@fullcalendar/list';
 
-let evenements = [{
-    "title": "toto",
-    "start": "2024-08-10 20:00:00",
-    "end": "2024-08-10 22:00:00",
-    }]
 
 document.addEventListener('DOMContentLoaded', function() {
     let calendarEl = document.getElementById('calendar');
@@ -18,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         buttonText: {
             today: 'Aujourd\'hui'
         },
-        events: evenements
+        events: '/api/events',
         
       });;
 

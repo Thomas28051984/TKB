@@ -30,7 +30,7 @@ p {
 }
 
 hr {
-  border: 2px solid rgb(255, 0, 0);
+  border: 15px solid rgb(#5c5a5a);
   margin: 0;
 }
 
@@ -367,4 +367,25 @@ table {
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form_connexion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+#bouton_connexion {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rideau-gauche {
+  height: 100%;
+}
+
+.rideau-droite {
+  height: 100%;
+  margin-right: 0;
 }
